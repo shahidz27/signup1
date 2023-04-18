@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up form</title>
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"  >
+    <script src="https://kit.fontawesome.com/92765ea936.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign up </h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field"id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="name"><br>
+                    </div> 
+                    <div class="input-field">    
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="email"> <br>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="password"><br>
+                    </div> 
+                    <p>lost password <a href="#">click here</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="signupBtn" >sign up</button>
+                    <button type="button"id="signinBtn" class="disable">sign in</button>
+
+                    
+    
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        let signupBtn = document.getElementById("signupBtn")
+        let signinBtn = document.getElementById("signinBtn")
+        let nameField = document.getElementById("nameField")
+        let title = document.getElementById("title")
+
+        signinBtn.onclick = function(){
+            nameField.style.maxHeight = "0";
+            title.innerHTML = "sign in"
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable");
+
+        }
+
+        signupBtn.onclick = function(){
+            nameField.style.maxHeight = "60px";
+            title.innerHTML = "sign up"
+            signupBtn.classList.remove("disable");
+            signinBtn.classList.add("disable");
+
+        }
+        
+    </script>
+    
+</body>
+</html>
